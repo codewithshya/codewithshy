@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My Profile {% endblock title %}
+{% block body %}
+<h1 class="text-center fs-1 text-success"><i class="fa-regular fa-id-card"></i> <b><u>Contact US</u></b></h1>
+
+<!-- <div class="container2 mt-4 mb-4 m-4 "> -->
+    <div class="container2 mt-4 mb-4 m-4 p-0" style="background: url(../static/images/back1.png);background-repeat: no-repeat;background-size: cover;">
+    <div class="col-sm-10 mx-auto">
+    <div class="row">
+    <div class="col-sm-6 form-control " style="width: 600px; background-image:linear-gradient(to right, rgb(174, 162, 202)20%, rgb(31, 101, 5) 80%); color: rgba(231, 232, 224, 0.79);">
+        <form id="otp-form" method="POST" action="/verify-otp/">
+            <input type="hidden" name="user_id" value="{{ user.id }}">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" name="otp" id="otp" required>
+            <button type="submit">Verify OTP</button>
+        </form>
+        
+        <script>
+            document.getElementById('otp-form').addEventListener('submit', async (event) => {
+                event.preventDefault();
+                const formData = new FormData(event.target);
+                const response = await fetch(event.target.action, {
+                    method: 'POST',
+                    body: formData,
+                });
+                const data = await response.json();
+                alert(data.message);
+            });
+        </script>
+        
+
+    </div>
+</div>
+    </div>
+    </div>
+{% endblock %}

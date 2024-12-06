@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Product Detail {% endblock title %}
+{% block body %}
+<div class="container">
+    <div class="row">
+{% for product in prod %}
+        <div class="col-sm-6 text-center align-self-center">
+            <img src="{{product.product_image.url}}" alt="">
+            <div class="img-fluid img-thumbnail">
+
+            </div>
+            <div class="col-sm-5 offset-sm-1">
+           <h2>Product Title: {{product.name}}</h2>
+           <hr>
+           <p>{{product.price}}</p><br>
+           <h4>Rs. {{product.discription}}
+           <small class="fw-light text-decoration-line-through">Rs. {{product.stock}}</small></h4><br>
+           {% if item_already_in_cart %}
+           <a href="{% url 'showcart' %}">Goto cart</a>
+           {% else %}
+           <form action="/add-to-cart/1/" class="d-inline">
+             <input type="hidden" name="prod_id" value="Product.id" id="prod_id">
+
+           <a href="{% url 'add-to-cart/1/' %}" class="btn btn-success">Add to Cart</a>
+           </form>
+           {% endif %}
+           <a href="{% url 'buy' %}" class="btn btn-danger shadow px-5 py-2 ms-4">Buy Now</a>
+           <h5 class="mt-5">Available Offers</h5>
+           <ul>
+            <li>Bank Offers 5%  Unlimited Cashback on Flipcart Axis Bank Credit</li>
+            <li>Special Price Get Extra Rs3000 Off (Price  Inclusive Of Discount)</li>
+            <li>No cost EMI Rs. 1455/month.Standard Emi Also available</li>
+            <li>Partner offers Rs. 2000 Flipcart Gift Card on Every 1000th
+                Transaction with a new Visa Debit Credit
+            </li>
+           </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

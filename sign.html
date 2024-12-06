@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{%  load static %}
+{% block body %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <div class="row">
+            <div class="col-md-6 bg-danger mt-3"style="margin-left:300px;">
+                <h2 class="text-center text-light">Sign In </h2>
+                <form>
+                    <h1 class="h3 mb-3 fw-normal text-light"style="text-align:center;"><b><u>Welcome Customers</u></b></h1>
+                    <div class="form-floating mt-3 text-light">
+                        <input type="email" class="form-control" id="floatingInput" name="email" style="border-radius:50px;">
+                        <label for=""><i class="fa-solid fa-envelope"></i> Emailaddress</label>
+                      </div>
+                    <div class="form-floating mt-3 text-light">
+                        <input type="mobileno" class="form-control" id="floatingInput" name="mobileno" style="border-radius:50px; ">
+                        <label for="floatingInput"><i class="fa-solid fa-phone"></i> Mobile Number</label>
+                      </div>
+                      <button class="btn btn-primary w-100 py-2 mt-3 mb-2" type="submit" style="border-radius: 50px;">Sign-in</button>
+                    </form>
+                    <a href="{% url 'shoping' %}"><button class="btn btn-light w-100 py-2 mt-3 mb-2" type="submit" style="border-radius: 50px;">Create your shoping Account</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

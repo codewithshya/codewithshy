@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My Profile {% endblock title %}
+{% block body %}
+<div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-dark text-center"><b><u>Show Enquiry</u></b></h1>
+        <table class="table table-bordered" style="background-color: blue;">
+                <tr class="table-dark">
+                    <th>Sr no</th>
+                    <th>Name</th>
+                    <th>Emailaddress</th>
+                    <th>Mobile Number</th>
+                    <th>Address</th>
+                    <th>Message</th>
+                    <th>OTP</th>
+                    <th>action</th>
+
+                </tr>
+                {% for i in Show %}
+                <tr>
+                    <td class="text-light" style="background-image:linear-gradient(to right, rgb(174, 162, 202)20%, rgb(31, 101, 5) 80%);">{{i.id}}</td>
+                    <td class="text-light" style="background-image:linear-gradient(to right, rgb(12, 82, 7)20%, rgb(136, 130, 8) 80%);">{{i.name}}</td>
+                    <td class="text-light" style="background-image:linear-gradient(to right, rgb(29, 13, 66)20%, rgb(24, 58, 11) 80%);">{{i.emailaddress}}</td>
+                    <td class="text-light" style="background-image:linear-gradient(to right, rgb(61, 6, 51)20%, rgb(6, 73, 44) 80%);">{{i.mobileno}}</td>
+                    <td class="text-light" style="background-image:linear-gradient(to right, rgb(9, 83, 68)20%, rgb(72, 6, 6) 80%);">{{i.address}}</td>
+                    <td class="text-light" style="background-image:linear-gradient(to right, rgb(83, 11, 23)20%, rgb(98, 117, 236) 80%);">{{i.message}}</td>
+                    <td class="text-light" style="background-image:linear-gradient(to right, rgb(225, 28, 216)20%, rgb(69, 208, 18) 80%);">{{i.otp}}</td>
+                     <td class="bg-primary text-light">
+  <a href="{% url 'showenq'  %}">
+    <button class="btn btn-sm btn-danger"><i class="fa-solid fa-trash-can text"></i></button>
+  </a>
+</td>
+<td class="bg-primary text-light">
+    <a href="{% url 'showenq'  %}">
+      <button class="btn btn-sm btn-success"><i class="fa-sharp fa-solid fa-pen-to-square"></i></button>
+    </a>
+ 
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+</div>{% endblock %}

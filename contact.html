@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My Profile {% endblock title %}
+{% block body %}
+<h1 class="text-center fs-1 text-success"><i class="fa-regular fa-id-card"></i> <b><u>Contact US</u></b></h1>
+
+<!-- <div class="container2 mt-4 mb-4 m-4 "> -->
+    <div class="container2 mt-4 mb-4 m-4 p-0" style="background: url(../static/images/back1.png);background-repeat: no-repeat;background-size: cover;">
+    <div class="col-sm-10 mx-auto">
+    <div class="row">
+    <div class="col-sm-6 form-control " style="width: 600px; background-image:linear-gradient(to right, rgb(174, 162, 202)20%, rgb(83, 95, 37) 80%); color: rgba(231, 232, 224, 0.79);">
+    <form  method="post" class="contact-form" style="border-radius: 50px; ">
+        {% csrf_token %}
+        <div class="form-control text-primary mt-2" style="background-image:linear-gradient(to right, rgb(174, 162, 202)20%, rgb(31, 101, 5) 80%); border: none;">
+            <div class="tag"><i class="fa-solid fa-user"></i> Full Name</div>
+            <input type="text" class="form-control bg-transparent" name="name" style="border-radius: 50px;  border: 1px solid rgb(5, 44, 5);">
+        </div>
+        <div class="form-control text-primary mt-2" style="background-image:linear-gradient(to right, rgb(174, 162, 202)20%, rgb(31, 101, 5) 80%);border: none;">
+            <div class="tag"><i class="fa-solid fa-envelope"></i> Email Address</div>
+            <input type="text"  class="form-control bg-transparent" name="emailaddress" style="border-radius: 50px;  border: 1px solid rgb(5, 44, 5);">
+        </div>
+        <div class="form-control text-primary mt-2" style="background-image:linear-gradient(to right, rgb(174, 162, 202)20%, rgb(31, 101, 5) 80%); border-radius: 50px; border: none;">
+            <div class="tag"><i class="fa-solid fa-phone"></i> Mobile Number</div>
+            <input type="text"  class="form-control bg-transparent" name="mobileno" style="border-radius: 50px;  border: 1px solid rgb(5, 44, 5);">
+        </div>
+       
+        <div class="form-control text-primary mt-2" style="background-image:linear-gradient(to right, rgb(174, 162, 202)20%, rgb(31, 101, 5) 80%); border-radius: 20px; border: none;">
+            <div class="tag"><i class="fa-sharp fa-solid fa-address-card"></i> Address</div>
+            <textarea name="address"  class="form-control bg-transparent" cols="1" rows="1" style="  border: 1px solid rgb(5, 44, 5); border-radius: 50px;"></textarea>
+        </div>
+        <div class="form-control text-primary mt-2" style="background-image:linear-gradient(to right, rgb(174, 162, 202)20%, rgb(31, 101, 5) 80%); border: none;">
+            <div class="tag"><i class="fa-solid fa-message" ></i> Message</div>
+            <textarea name="message"  class="form-control bg-transparent" cols="1" rows="1" style="  border: 1px solid rgb(5, 44, 5); border-radius: 50px;"></textarea>
+        </div>
+        <div class="form-control text-primary mt-2" style="background-image:linear-gradient(to right, rgb(174, 162, 202)20%, rgb(31, 101, 5) 80%); border: none;">
+    <button type="submit" class="btn text-light form-control mb-4" style="background-image:linear-gradient(to right, rgb(53, 27, 27)20%, rgb(82, 71, 17) 80%); border: none; border-radius: 50px;">Send OTP</button></div>
+      <a href="{% url 'verifyotp' %}"><button type="submit" class="btn text-light form-control mb-4" style="background-image:linear-gradient(to right, rgb(78, 35, 10)20%, rgb(17, 51, 4) 80%); border: none; border-radius: 50px;">Verify OTP</button>
+      </a> 
+    </div>
+
+      <div class="col-sm-6" >
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28887.264805300252!2d86.07844243562963!3d25.172580724486046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2233075850a79%3A0x3bda95f4b79381ae!2sLakhisarai%2C%20Bihar!5e0!3m2!1sen!2sin!4v1731934217598!5m2!1sen!2sin" width="600px" height="700px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+   
+   
+      <li class="d-grid"><a href="{% url 'showenq' %}" class="btn btn-outline-primary mt-2 mb-4 text-light " style=" float: left; border-radius: 50px;"><i class="fa-duotone fa-regular fa-eye"></i> Show Enquiry</a></li>
+      
+    </form>
+   
+</div>
+</div>
+</div> 
+  
+  
+{% endblock %}

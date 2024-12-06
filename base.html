@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> My Shop of Simple Websites {% block title %}Home{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="{% static 'images/card/logon.png'%}">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'js/owlCarousel.js' %}"></script>
+<style>
+  
+  body{
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  
+}
+</style>
+<body>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+<header class="py-4 px-4 mx-auto sticky-top" style="background-image:linear-gradient(to right, rgb(30, 78, 13)20%, rgb(82, 29, 205) 80%); ">
+  <div class="container sticky-top mx-auto">
+    <div class="text-center text-light">
+    <div class="row " style="background-image:linear-gradient(to right, rgb(30, 78, 13)20%, rgb(82, 29, 205) 80%);">
+        <div class="col-md-1">
+            <img src="../static/images/card/logon.png" alt="" class="p-0 position-fixed " height="65">
+        </div>
+        <div class="col-md-3"><a href="https://www.google.com/maps"><button class=" w-100%" style=" border-radius: 20px;border:10px; background-image:linear-gradient(to right, rgb(167, 35, 134)20%, rgb(169, 102, 8) 80%); color: blue;">
+          <p class="text-center w-100% " style="font-size: 13px;position: absolute;color: rgb(10, 77, 23);"><img src="../static/images/card/Mahabali.png.jpg" class="p-2" alt="" height="112" style="width: 30%; margin-left: -28px; margin-top: -9px; border-radius: 90px;">
+          <b>Delivery to Lakhisarai, Bihar 811311</b></p><p style="width: 300px;margin: 10px;margin-left: -40px;padding: 1%; color: rgb(10, 77, 23);">
+          <b><i class="fa-solid fa-location-dot fa-shake mt-3 mb-2 m-1" style="padding: 1%;height: 100%;width: 90%; margin-left: -10px;"></i> &nabla;&nabla; &nabla;&nabla; &nabla;&nabla;&nabla;Update Location</b></p></button></a></div>
+        <div class="col-md-2">
+          <nav class="navbar bg-body-">
+            <div class="container-fluid">
+              <form method="post" action="{% url 'search' %}" class="d-flex w-100%" role="search">
+                <a href="{% url 'search' %}"><input class="form-control w-100" type="search" placeholder="Search Amaazon.in" aria-label="search" name="query" style="border-radius:50px;background-color: rgb(206, 207, 188);color: rgb(3, 16, 27); position: absolute;">            
+                  <i class="fa-sharp fa-solid fa-magnifying-glass  py-3" style="margin-left: 170px; position: absolute; display: flex;" ></i>
+</a>
+              </form>
+            </div>
+          </nav>
+        </div>
+        <div class="col-md-3 mt-4" style="position: sticky ;padding-left: 5px;">
+          <a href="https://www.youtube.com/"><button style="background-image:linear-gradient(to right, rgb(200, 59, 12)20%, rgb(192, 44, 59) 80%);color: rgb(145, 8, 14);"><i class="fa-brands fa-youtube fa-shake w-100"></i></button></a>
+          <a href="https://www.tweeter.com/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(72, 230, 37);"><i class="fa-brands fa-twitter fa-shake w-100"></i></button></a>
+          <a href="https://www.facebook.com/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(224, 162, 39);"><i class="fa-brands fa-facebook fa-shake w-100"></i></button></a>
+          <a href="https://www.linkedin.com/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(240, 90, 48);"><i class="fa-brands fa-linkedin fa-shake w-100"></i></button></a>
+          <a href="https://www.instagram.com/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(120, 221, 109);"><i class="fa-brands fa-square-instagram fa-shake w-100"></i></button></a>
+          <a href="https://www.amazon.in/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(228, 67, 56);"><i class="fa-brands fa-cc-amazon-pay fa-shake w-100"></i></button></a>  
+          <a href="http://127.0.0.1:8000/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(17, 213, 99);"><i class="fa-solid fa-house fa-shake w-100"></i></button></a>
+          <a href="https://www.flipkart.com/"><button style="background-image:linear-gradient(to right, rgb(63, 7, 7)20%, rgb(61, 65, 7) 80%);color: rgb(179, 217, 75);"><img src="../static/images/card/flip.png w" class="fa-shake fa-phone fa-brands"style="height:20px;width: 20px;"></button></a> 
+        </div> 
+        <!-- <div class="col-md-1"></div> -->
+        <div class="col-md-3 text-light">
+          <h6><button style="background-image:linear-gradient(to right, rgb(164, 11, 9)20%, rgb(149, 159, 8) 80%); color: aliceblue;border-radius: 5px;"><i class="fa-solid fa-phone fa-shake w-100%"></i></button> Call US:+91 9523 558667</h6>
+          <h6><button style="background-image:linear-gradient(to right, rgb(164, 11, 9)20%, rgb(149, 159, 8) 80%); color: aliceblue;border-radius: 5px;"><i class="fa-solid fa-envelope fa-shake w-100%"></i> </button> akashbd09p@gmail.com</h6>
+        </div>
+    </div>
+    <!-- </div>
+  </div>
+  </header> -->
+ <!-- Navbar start 1 -->
+ <!-- <header class="py-1 px-lg-5 sticky-top" style="background-image:linear-gradient(to right, rgb(29, 74, 8)20%, rgb(82, 29, 205) 80%); text-align: justify;">
+  <div class="container">
+    <div class="text-center text-light"> -->
+ <nav class="navbar navbar-expand-lg sticky-top text-white">
+  <div class="row">
+   <div class="col-sm-12 mx-auto">
+       <div class="row">
+   
+   <div class="container-fluid">
+<!-- <form class="d-flex">
+       <input class="form-control me-2" type="search" placeholder="search" aria-level="search">
+       <button class="btn btn-warning" type="submit">Search</button>
+       
+     </form> -->
+    
+     <div class="a"></div>
+     <div class="b"></div>
+     <div class="c"></div>
+     <div class="d"></div>
+     <button class="navbar-toggler bg-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+
+       
+     </button>
+     <div class="collapse navbar-collapse w-100%" id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2">
+         
+         <li class="nav-item dropdown mx-2 w-100%"><a class="nav-link dropdown-toggle text-light w-100%" href="#" id="profileDropdown" role="button"
+           data-bs-toggle="dropdown" aria-expanded="false"><img src="../static/images/Akash.png.png" alt="" height="50" style="border-radius: 100%;"> Akash Kumar</a>
+         <ul class="dropdown-menu w-100%" area-labelleadby="profileDropdown"><li>
+           <a class="dropdown-item w-100%" href="{% url 'profile' %}">Profile</a></li>
+         <li><a class="dropdown-item w-100%" href="{% url 'order' %}">Orders</a></li>
+       <li><a class="dropdown-item w-100%" href="{% url 'passwordchange' %}">Change Password</a></li>
+     <li><a class="dropdown-item w-100%" href="{% url 'logout' %}">Logout</a></li>
+   </ul>
+ </li>
+
+ <li class="nav-item  w-100%">
+  <a class="nav-link active w-100%"  href="#" style="color: aliceblue;"><span class="badge bg-danger">4</span> |  Cart</a>
+</li>
+ <li class="nav-item w-100%">
+   <a class="nav-link active w-100%" aria-current="page" href="{% url 'login' %}" style="color: aliceblue;"> |  Login</a>
+   </li>
+   <li class="nav-item w-100%">
+     <a class="nav-link active w-100%" aria-current="page" href="{% url 'register' %}" style="color: aliceblue;"> |  Registeration</a>
+     </li>
+         <li class="nav-item mx-2 w-100%">
+           <a class="nav-link active w-100%" aria-current="page" href="{% url 'index' %}" style="color: rgb(228, 233, 237);">| Home</a>
+         </li>
+         <li class="nav-item mx-2 w-100%">
+           <a class="nav-link active w-100%" aria-current="page" href="{% url 'search' %}" style="color: rgb(228, 233, 237);">| Search</a>
+         </li>
+         <li class="nav-item dropdown w-100%">
+           <a class="nav-link dropdown-toggle text-light w-100%" href="{% url 'fresh' %}" id="fashionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: aliceblue;"> |  Fashion</a>
+         <ul class="dropdown-menu" area-labelledby="fashionDropdown">
+           <li><a class="dropdown-item w-100%" href="{% url 'topwear' %}">Top Wear</a></li>
+           <li><a class="dropdown-item w-100%" href="{{ b.product_image.url }}">Bottom Wear</a></li>
+         </ul>
+         </li>
+         <li class="nav-item dropdown mx-2 w-100%"><a class="nav-link dropdown-toggle text-light w-100%" href="#" id="profileDropdown" role="button"
+           data-bs-toggle="dropdown" aria-expanded="false">Electronics</a>
+         <ul class="dropdown-menu w-100%" area-labelleadby="profileDropdown"><li>
+           <a class="dropdown-item w-100%" href="{% url 'mobile2' %}">Mobile</a></li>
+         <li><a class="dropdown-item w-100%" href="{% url 'laptop3' %}">Laptop</a></li>
+   </ul>
+ </li>
+         <li class="nav-item w-100%">
+         <a class="nav-link active w-100%" aria-current="page" href="{% url 'product_list' %}" style="color: aliceblue;"> |  Sell</a>
+       </li>
+       
+     
+
+ <!-- <li class="nav-item">
+   <a class="nav-link active" aria-current="page" href="#" style="color: aliceblue;">All</a>
+ </li>
+ <li class="nav-item dropdown mx-2"><a class="nav-link dropdown-toggle text-light" href="#" id="profileDropdown" role="button"
+   data-bs-toggle="dropdown" aria-expanded="false">Akash Kumar</a>
+ <ul class="dropdown-menu" area-labelleadby="profileDropdown"><li>
+   <a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+ <li><a class="dropdown-item" href="{% url 'order' %}">Orders</a></li>
+<li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+</ul>
+</li>
+ <li class="nav-item mx-2">
+   <a class="nav-link active" aria-current="page" href="{% url 'index' %}" style="color: rgb(228, 233, 237);">| Home</a>
+ </li>
+-->
+<li class="nav-item w-100%">
+<a class="nav-link active w-100%" aria-current="page" href="#" style="color: aliceblue;"> |  Amazon Pay</a>
+</li>
+<li class="nav-item w-100%">
+<a class="nav-link active w-100%" aria-current="page" href="#" style="color: aliceblue;"> |  Books</a>
+</li>
+
+
+ <li class="nav-item w-100%">
+   <a class="nav-link active w-100%" aria-current="page" href="{% url 'contact' %}" style="color: aliceblue;"> |  Contact Us</a>
+   </li>
+   
+       </ul>
+
+     </div>
+   </div>
+
+         </div>
+     </div>
+ </div>
+</nav>
+</header>
+
+     <!-- Navbar end1 -->
+     {% block body %}
+     {% endblock %}
+     {% block payment-getway %}
+     
+     {% endblock payment-getway %}
+
+
+        
+         <!-- Footer start -->
+         
+  <div class="col-sm-10 w-100%" style="padding-left:-20%px; position:static;margin-left: 100px;">
+    <div class="row text-light w-100%" style="background-color: rgb(232, 109, 7); border-radius:570px 200px 4px 5px;width: 100%;">
+      <div class="col-sm-6 w-100%">
+        <img src="../static/images/card/f1.png" alt="">
+      </div>
+      <div class="col-sm-6">
+        <h1 style="padding: 5%; padding-left: 10%;">Initiate a discussion alignment with PixoSoft</h1>
+       <span style="font-size: 18px; text-align: justify;padding: 1;">Being data-driven means that everything should be quantifiable and translate back to revenue. Our first step is to align with executive leadership team’s goals, and understand the growth drivers of the business. Then, we begin to reverse engineer to create solutions to optimise the process.
+      </span> 
+      </div></div>
+      <!-- Modal first start -->
+<button type="button" class="btn btn-success w-100%" data-bs-toggle="modal" data-bs-target="#exampleModal" style="height: 45px; width: 200px; margin-left: 850px; margin-top: -25px; border-radius: 25px; margin-top: -80px;"> Get Started</button>
+<div class="modal fade" id="exampleModal">
+  <div class="modal-dialog">
+    <div class="modal-content" style="background-image: url('../static/images/card/back3.png');">
+      <h3 class="mt-3 text-center text-dark"><b><u><i class="fa-solid fa-eye"></i> Show us a message</u></b></h3>
+
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-dark">
+              <form>
+                <div class="mb-3">
+                  <input type="text" class="form-control"placeholder="Name:" id="name" style="border-radius: 50px;">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control"placeholder="Emailaddress:" id="emailaddress" style="border-radius: 50px;">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control"placeholder="Address:" id="address" style="border-radius: 50px;">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control"placeholder="Phone Number:" id="phone number" style="border-radius: 50px;">
+                </div>
+                <div class="mb-3">
+<select class="form-control" id="country" required="" style="border-radius: 50px;"><option value="">Select Country</option>
+  <option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option>
+  <option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option>
+  <option value="Andorra">Andorra</option><option value="Angola">Angola</option>
+  <option value="Anguilla">Anguilla</option><option value="Antarctica">Antarctica</option>
+  <option value="Antigua And Barbuda">Antigua And Barbuda</option>
+  <option value="Argentina">Argentina</option><option value="Armenia">Armenia</option>
+  <option value="Aruba">Aruba</option><option value="Australia">Australia</option>
+  <option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option>
+  <option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option>
+  <option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option>
+  <option value="Belarus">Belarus</option><option value="Belgium">Belgium</option>
+  <option value="Belize">Belize</option><option value="Benin">Benin</option>
+  <option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option>
+  <option value="Bolivia">Bolivia</option><option value="Bosnia And Herzegowina">Bosnia And Herzegowina</option>
+  <option value="Botswana">Botswana</option><option value="Bouvet Island">Bouvet Island</option>
+  <option value="Brazil">Brazil</option><option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+  <option value="Brunei Darussalam">Brunei Darussalam</option><option value="Bulgaria">Bulgaria</option>
+  <option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option>
+  <option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option>
+  <option value="Canada">Canada</option><option value="Cape Verde">Cape Verde</option>
+  <option value="Cayman Islands">Cayman Islands</option><option value="Central African Republic">Central African Republic</option>
+  <option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option>
+  <option value="Christmas Island">Christmas Island</option><option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+  <option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option>
+  <option value="Congo The Democratic Republic Of The">Congo The Democratic Republic Of The</option>
+  <option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option>
+  <option value="Cote D'Ivoire">Cote D'Ivoire</option><option value="Croatia (Local Name: Hrvatska)">Croatia (Local Name: Hrvatska)</option>
+  <option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option>
+  <option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option>
+  <option value="Dominican Republic">Dominican Republic</option><option value="Timor-Leste (East Timor)">Timor-Leste (East Timor)</option>
+  <option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option>
+  <option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option>
+  <option value="Ethiopia">Ethiopia</option><option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+  <option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option>
+  <option value="France">France</option><option value="France Metropolitan">France Metropolitan</option>
+  <option value="French Guiana">French Guiana</option><option value="French Polynesia">French Polynesia</option>
+  <option value="French Southern Territories">French Southern Territories</option><option value="Gabon">Gabon</option>
+  <option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option>
+  <option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option>
+  <option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option>
+  <option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option>
+  <option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option>
+  <option value="Heard And Mc Donald Islands">Heard And Mc Donald Islands</option>
+  <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+  <option value="Honduras">Honduras</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option>
+  <option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option>
+  <option value="Iran (Islamic Republic Of)">Iran (Islamic Republic Of)</option><option value="Iraq">Iraq</option>
+  <option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option>
+  <option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option>
+  <option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option>
+  <option value="Korea Democratic People's Republic Of">Korea Democratic People's Republic Of</option>
+  <option value="Korea Republic Of">Korea Republic Of</option><option value="Kuwait">Kuwait</option>
+  <option value="Kyrgyzstan">Kyrgyzstan</option><option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+  <option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option>
+  <option value="Liberia">Liberia</option><option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macau">Macau</option><option value="Macedonia Former Yugoslav Republic Of">Macedonia Former Yugoslav Republic Of</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia Federated States Of">Micronesia Federated States Of</option><option value="Moldova Republic Of">Moldova Republic Of</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="Netherlands Antilles">Netherlands Antilles</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option><option value="Northern Mariana Islands">Northern Mariana Islands</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn">Pitcairn</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option><option value="Reunion">Reunion</option><option value="Romania">Romania</option><option value="Russian Federation">Russian Federation</option><option value="Rwanda">Rwanda</option><option value="Saint Kitts And Nevis">Saint Kitts And Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Vincent And The Grenadines">Saint Vincent And The Grenadines</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome And Principe">Sao Tome And Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Slovakia (Slovak Republic)">Slovakia (Slovak Republic)</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Georgia South Sandwich Islands">South Georgia South Sandwich Islands</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="St. Helena">St. Helena</option><option value="St. Pierre And Miquelon">St. Pierre And Miquelon</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Svalbard And Jan Mayen Islands">Svalbard And Jan Mayen Islands</option><option value="Swaziland">Swaziland</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syrian Arab Republic">Syrian Arab Republic</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania United Republic Of">Tanzania United Republic Of</option><option value="Thailand">Thailand</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option><option value="Trinidad And Tobago">Trinidad And Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Turks And Caicos Islands">Turks And Caicos Islands</option><option value="Tuvalu">Tuvalu</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Venezuela">Venezuela</option><option value="Viet Nam">Viet Nam</option><option value="Virgin Islands (British)">Virgin Islands (British)</option><option value="Virgin Islands (U.S.)">Virgin Islands (U.S.)</option><option value="Wallis And Futuna Islands">Wallis And Futuna Islands</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Yugoslavia">Yugoslavia</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select>
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control"placeholder="Password:" id="password" style="border-radius: 50px;">
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" id="message-text" placeholder="Message" style="border-radius: 50px;"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary form-control" style="border-radius: 50px;">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+      <!-- Modal end-->
+      <!--  start -->
+   
+
+
+
+<!-- Footer Start -->
+ 
+ <footer class="py-5 w-100% h-100%" style="background-color: rgb(44, 2, 2);">
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="text-center">
+      <div class="col-sm-10 mx-auto">
+         <div class="row text-light mt-4">
+          <div class="col-sm-2 mt-2">
+            <h2 class="text-center text-info">PixoSoft</h2>
+            <h6><i class="fa-solid fa-location-dot"></i> Lakhisarai Bahadurpur Bihar 811311 India</h6>
+            <h6><i class="fa-solid fa-envelope"></i> akash@gmail.com</h6>
+            <h6><i class="fa-solid fa-phone"></i> +918765432568</h6>
+            <h6><i class="fa-solid fa-phone"></i> +919457687967</h6>
+            <h6><i class="fa-solid fa-phone"></i> +919668344689</h6>
+            <h6><i class="fa-solid fa-phone"></i> +919356544775</h6>
+            <h6><i class="fa-solid fa-phone"></i> +919170996923</h6>
+            <h6><i class="fa-solid fa-phone"></i> +919523558667</h6>
+
+          </div>
+          <div class="col-sm-3 mt-2">
+            <h4 class="text-info">Our Services</h4>
+            <h6>software Development</h6>
+            <h6>Web Application Development</h6>
+            <h6>Mobile App Development</h6>
+            <h6>Websites Development</h6>
+            <h6>E-Commerce Solutions</h6>
+            <h6>OpenCart Development</h6>
+            <h6>Digital Marketing</h6>
+            <h6>Social Media Marketing</h6>
+            <h6>2-D & 3-D Animation</h6>
+            <h6>View All Services</h6>
+          </div>
+          <div class="col-sm-3 mt-2">
+            <h4 class="text-info">Software Solutions</h4>
+            <div class="col-sm-2">
+            <h6>Software Solutions</h6>
+            <h6>Bus Booking pro</h6>
+            <h6>Ski Hire Solution</h6>
+            <h6>Appointmentsw</h6>
+            <h6>Pixo Booking</h6>
+            <h6>Menurs</h6>
+            </div>
+            <div class="col-sm-1" style="margin-left: 140px;margin-top: -270px;">
+              <h6>pix taxi</h6>
+              <h6>Shuttle Booking</h6>
+              <h6>Kebabsw</h6>
+              <h6>Pizzasw</h6>
+            </div>
+          </div>
+          <div class="col-sm-2 mt-2">
+            <h4 class="text-info">Industry Solutions</h4>
+            <h6>Industry Solutions</h6>
+            <h6>Transport industry</h6>
+            <h6>Tourism Industry</h6>
+            <h6>Food and Hospitality</h6>
+            <h6>ServiceIndustry</h6>
+            <h6>Retail Industry</h6>
+            <h6>rental Industry</h6>
+          </div>
+          <div class="col-sm-2 mt-2">
+            <h4 class="text-info">pricing</h4>
+            <h6>manage Website pricing</h6>
+            <h6>Social media Marketing Princing</h6>
+            <h6>Seo Princing</h6>
+            <h6>Branding & Logo Design</h6>
+            <h6>Animated Video Princing</h6>
+            <h6>Web Application Princing</h6>
+            <h6>Mobile Application Princing</h6>
+          </div>
+          <div class="col-md-3 mt-4 mb-3" style="margin-top: -10px;">
+            <a href="https://www.youtube.com/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(145, 8, 14);"><i class="fa-brands fa-youtube"></i></button></a>
+            <a href="https://www.tweeter.com/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(72, 230, 37);"><i class="fa-brands fa-twitter"></i></button></a>
+            <a href="https://www.facebook.com/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(224, 162, 39);"><i class="fa-brands fa-facebook"></i></button></a>
+            <a href="https://www.linkedin.com/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(240, 90, 48);"><i class="fa-brands fa-linkedin"></i></button></a>
+            <a href="https://www.instagram.com/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(120, 221, 109);"><i class="fa-brands fa-square-instagram"></i></button></a>
+            <a href="https://www.amazon.in/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(228, 67, 56);"><i class="fa-brands fa-cc-amazon-pay"></i></button></a>  
+            <a href="http://127.0.0.1:8000/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(17, 213, 99);"><i class="fa-solid fa-house"></i></button></a>
+            <a href="https://www.google.in/"><button style="background-image:linear-gradient(to right, rgb(11, 134, 35)20%, rgb(85, 102, 9) 80%);color: rgb(232, 56, 56);"><i class="fa-brands fa-google"></i></button></a>  
+          </div>
+      </div>
+     </div>
+    </div>
+  </div>
+    </footer>
+    <!-- Footer end -->
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Laptop{% endblock title %}
+{% block body %}
+
+<!-- Top Wear Start -->
+<div class="row mx-auto">
+    <div class="col-sm-10 mx-auto">
+      <div class=" mt-4 mb-3">
+<div class="mx-3">
+  <h2 class="text-light">Trending Shoping Deals</h2>
+  <div class="owl-carousel" id="slider3">
+    {% for tp in topwears %}
+    <a href="product/1/" class="btn">
+  <div class="item w-100"><img src="{{tp.product_image.url}}" alt="" height="200px"><span class="fw-bold">{{tp.title}}</span>
+  <br><span class="text-info"> Discount Price Rs. {{tp.discounted_price}}</span>
+  <span class=" text-success m-1" style="border-radius: 10px;">Selling Price Rs. {{tp.selling_price}}</span><br>
+  <button class="btn btn-primary" type="submit">buy now</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-secondary" type="submit">Add Cart</button>
+  
+</div></a>
+  {% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Wear  end -->
+
+{% endblock %}

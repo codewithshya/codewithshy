@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cart {% endblock title %}
+{% block body %}
+<div class="container my-5">
+    <div class="row">
+        <h1 class="text-center mb-5 text-white">Shoping Cart</h1>
+<div class="col-sm-8">
+    <div class="card">
+        <div class="card-body">
+            <h3>Cart</h3>
+            {% for cart in carts %}
+            <hr>
+            <div class="row">
+                <div class="col-sm-3 text-center align-self-center"><img src="{{cart.product.product_image.url}}" alt="" srcset="" class="img-fluid img-thumbnail shadow-sm" height="150" width="150"></div>
+                <div class="col-sm-9"></div>
+                <h5>{{cart.product.title}}</h5>
+                <p class="mb-2 text-muted small">{{card.product.description}}</p>
+                         <div class="my-3">
+                            <label for="Quantity">Quantity:</label>
+
+                                <a class="minus-cart btn"><i class="fas fa-plus-square fa-lg"></i></a>
+                                <span id="Quantity">{{cart.Quantity}}</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <a href="#" class="btn bt-sm btn-success mr-3">Remove Item</a>
+                                <p class="mb-0"><span><strong>Rs. {{cart.product.discounted_price}}</strong></span></p>
+                 </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="text-muted">
+        <div class="row my-5">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Cart</h3>
+                    <div class="row">
+                        <div class="col-sm-3 text-center align-self-center"><img src="../static/images/card/key1.png" alt="" srcset="" class="img-fluid img-thumbnail shadow-sm" height="150" width="150"></div>
+                        <div class="col-sm-9"></div>
+                        <h5>product 2</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur
+                             adipisicing elit. Vel facilis doloremque
+                              ex vitae, laborum ducimus expedita
+                               voluptate odio culpa nostrum minima
+                                voluptatibus a commodi, enim fugiat
+                                 at deleniti perspiciatis eius 
+                                 repellendus. </p>
+                                 <div class="my-3">
+                                    <label for="Quantity">Quantity:</label>
+        
+                                        <a class="minus-cart btn"><i class="fas fa-plus-square fa-lg"></i></a>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="#" class="btn btn-success mr-3">Remove Item</a>
+                                        <p class="mb-0"><span><strong>Rs. 150.00</strong></span></p>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h3>The Total Amount Of Product</h3>
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-item-center border-0 px-0 pb-0">Amount<span>Rs. 450</span></li>
+                    <li class="list-group-item d-flex justify-content-between align-item-center border-0 px-0 pb-0">Shiping <span>Rs.100</span></li>
+                    <li class="list-group-item d-flex justify-content-between align-item-center border-0 px-0 mb-3">
+                   <div><strong>Total</strong><small>(including VAT)</small>
+                </div>
+                <span><strong>Rs. 550.00</strong></span></li>
+                </ul>
+                <div class="d-grid"><a href="{% url 'checkout' %}" class="btn btn-success">Place Order</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="card-200" style="margin-left: 300px;margin-top: -313px;">
+                <div class="card-body">
+                    <h5 class="mb-4 text-light">We accept</h5>
+                    <img src="{% static 'images/card/pay5.png' %}" alt="" class="img-fluid" style="height: 265px;width: 300px; margin-right: 900;margin-right: 50px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+</div>
+
+{% endblock %}

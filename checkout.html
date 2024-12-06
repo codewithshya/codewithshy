@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Buy Now{% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- Bootstrap CSS for styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .checkout-container {
+            margin-top: 50px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .total-row {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Checkout Header -->
+        <div class="text-center mb-4">
+            <h1>Checkout</h1>
+            <p class="text-muted">Review your order before proceeding to payment</p>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="checkout-container">
+            <h2 class="mb-3">Order Summary</h2>
+            <table class="table table-bordered">
+                <thead class="table-light">
+                    <tr>
+                        <th>Product</th>
+                        <th>Price (₹)</th>
+                        <th>Quantity</th>
+                        <th>Subtotal (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in order.items.all %}
+                    <tr>
+                        <td>{{ item.product.title }}</td>
+                        <td>{{ item.price }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ item.quantity|floatformat:2|floatformat:2 }}</td>
+                    </tr>
+                    {% endfor %}
+                    <!-- Total Row -->
+                    {% load custom_filters %}
+                    <tr class="table-light total-row">
+                        <td colspan="3" class="text-end">Total Amount:</td>
+                        <td>₹{{ order.items.all|sum_field:"price" }}</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+            <!-- Additional Details (if required) -->
+            <div class="mt-4">
+                <h4>Shipping Address</h4>
+                <p>{{ order.shipping_address }}</p>
+
+                <!-- Placeholder for applying discount codes -->
+                <form class="d-flex gap-2 mt-3">
+                    <input type="text" class="form-control" placeholder="Have a discount code?">
+                    <button class="btn btn-outline-primary">Apply</button>
+                </form>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="text-end mt-4">
+                <a href="{% url 'process_payment' order.id %}" class="btn btn-success btn-lg">Pay Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+{% endblock %}

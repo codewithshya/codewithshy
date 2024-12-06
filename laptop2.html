@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="row bg-light zoom-in">
+    <div class="col-md-10 mx-auto">
+        <div class="row">
+            <div class="col-md-6">
+                <a href=""><img src="../static/images/card/laptop2.png" alt="" class="img-fluid img-thumbnail"></a>
+            </div>
+            <div class="col-md-6 mt-4">
+                <h3>HP Victus Gaming Laptop,Windows 11 Home,AMD<br>
+                     Ryzen 5 5600H,4Gb RTX 3050 Gpu,15.6-Inch (39.6 Cm),<br>
+                     Fhd,IPS,144Hz,16Gb Ddr4,512Gb Ssd,Backlit Kb,B&O,<br>
+                     9Ms Response Time,Dual Speakers (Blue,2.37 Kg),<br>
+                     Fb0106Ax</h3>
+                     <a href="javascript:void(0)"><button><i class="a-icon a-icon-star a-star-4 cm-cr-review-stars-spacing-big"><span class="a-icon-alt">4.2 out of 5 stars</span></i>
+                    </button></a>
+            </div>
+            <div class="col-md-2">
+                <a href="{% url 'addcart' %}" class="btn btn-warning text-light" style="border-radius: 30px;margin-left: -10px;margin-right: 1px;width: 200px;">ADD TO CART</a>
+                <a href="{% url 'sign' %}" class="btn btn-warning float-end text-light mb" style="border-radius: 30px;margin-left: 100px; margin-top: 10px;margin-right: 1px; width: 200px;">BUY NOW</a>
+
+               </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

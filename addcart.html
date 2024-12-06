@@ -1,0 +1,402 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cart {% endblock title %}
+{% block body %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+      <h1 class="text-center text-white mt-2">Shoping Cart</h1>
+
+        <div class="row mt-4">
+                <div class="col-sm-3">
+                    <div class="card h-100 shadow mycard2 mycard2">
+                
+                    <div class="card" style="width: 18rem;">
+                      <a href="{% url 'cart1' %}"><img src="../static/images/card/bag1.png"  alt="..." class="img-fluid img-thumbnail shadow-sm">
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                
+                        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt="" style="height: 15px;"> 63990/-</h5>
+                        <small class="card-text d-block"  style="margin: 10px;">Amazon Basics Laptop Bag Sleeve Case Cover Pouch with Handle for Men & Women | 15.6 Inch Laptop with Padded Laptop Compartment | Zipper Closure | Water Repellent Nylon Fabric (Black)
+                            4.1 out of 5 stars 535
+                            ₹265 ₹279 Save ₹14 (Extra 5%)
+                            </small>
+                          <div class="mt-2">
+                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div> 
+                 </div>
+                 <div class="col-sm-3">
+                    <div class="card h-100 shadow mycard2 mycard2">
+                
+                    <div class="card" style="width: 18rem;">
+                      <a href="{% url 'laptop' %}"><img src="../static/images/card/bag2.png"  alt="..." class="img-fluid img-thumbnail shadow-sm">
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                
+                        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""  style="height: 15px;"> 63990/-</h5>
+                        <small class="card-text d-block"  style="margin: 10px;">amazon basics Large Laptop Bag For Office, College & Travel | For Laptops up to 15.6 inches | PU Leather | Water & Scratch Resistant | USB for Charging | Spacious Storage (Beige and Black)
+                            4.0 out of 5 stars 513
+                            ₹1,709 ₹1,799 Save ₹90 (Extra 5%)
+                            </small>
+                          <div class="mt-2">
+                            <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                            <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div> 
+                 </div>
+                 <div class="col-sm-3">
+                    <div class="card h-100 shadow mycard2 mycard2">
+                
+                    <div class="card" style="width: 18rem;">
+                      <a href="{% url 'laptop' %}"><img src="../static/images/card/mouse1.png" alt="..." class="img-fluid img-thumbnail shadow-sm">
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                
+                        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt="" style="height: 15px;"> 63990/-</h5>
+                        <small class="card-text d-block"  style="margin: 10px;">Logitech B170 Wireless Mouse, 2.4 GHz with USB Nano Receiver, Optical Tracking, 12-Months Battery Life, Ambidextrous, PC/Mac/Laptop - Black
+                            4.3 out of 5 stars 75,609
+                            ₹379 ₹499 Save ₹120 (Extra 24%)
+                            .</small>
+                          <div class="mt-2">
+                            <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                            <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div> 
+                 </div>
+                 <div class="col-sm-3">
+                    <div class="card h-100 shadow mycard2 mycard2">
+                
+                    <div class="card" style="width: 18rem;">
+                      <a href="{% url 'laptop' %}"><img src="../static/images/card/mouse2.png"  alt="..." class="img-fluid img-thumbnail shadow-sm" >
+                      </a>
+                      <div>
+                        <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                
+                        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt="" style="height: 15px;"> 63990/-</h5>
+                        <small class="card-text d-block" style="margin: 10px;">Portronics Toad One Bluetooth Mouse with 2.4 GHz & BT 5.3 Dual Wireless, 6 Buttons, Rechargeable, RGB Lights, Connect 3 Devices, Ergonomic Design for Laptop, Smartphone, Tablet (Black)
+                            4.3 out of 5 stars 4,372
+                            ₹474 ₹499 Save ₹25 (Extra 5%).</small>
+                          <div class="mt-2">
+                            <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                            <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div> 
+                 </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-sm-3">
+                        <div class="card h-100 shadow mycard2 mycard2">
+                    
+                        <div class="card" style="width: 18rem;">
+                          <a href="{% url 'laptop' %}"><img src="../static/images/card/mous3.png" alt="..." class="img-fluid img-thumbnail shadow-sm">
+                          </a>
+                          <div>
+                            <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                    
+                            <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt="" style="height: 15px;"> 63990/-</h5>
+                            <small class="card-text d-block"  style="margin: 10px;">Portronics Toad One Bluetooth Mouse with 2.4 GHz & BT 5.3 Dual Wireless, 6 Buttons, Rechargeable, RGB Lights, Connect 3 Devices, Ergonomic Design for Laptop, Smartphone, Tablet (Black)
+                                4.3 out of 5 stars 4,372
+                                ₹474 ₹499 Save ₹25 (Extra 5%)                                
+                                </small>
+                              <div class="mt-2">
+                                <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                    
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div> 
+                     </div>
+                     <div class="col-sm-3">
+                        <div class="card h-100 shadow mycard2 mycard2">
+                    
+                        <div class="card" style="width: 18rem;">
+                          <a href="#"><img src="../static/images/card/mouse4.png" alt="..."  class="img-fluid img-thumbnail shadow-sm" style="height: 300px;width: 150px;margin-left: 75px;">
+                          </a>
+                          <div>
+                            <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                    
+                            <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt="" style="height: 15px;"> 63990/-</h5>
+                            <small class="card-text d-block"  style="margin: 10px;">amazon basics Large Laptop Bag For Office, College & Travel | For Laptops up to 15.6 inches | PU Leather | Water & Scratch Resistant | USB for Charging | Spacious Storage (Beige and Black)
+                                4.0 out of 5 stars 513
+                                ₹1,709 ₹1,799 Save ₹90 (Extra 5%)
+                                </small>
+                              <div class="mt-2">
+                                <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                    
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div> 
+                     </div>
+                     <div class="col-sm-3">
+                        <div class="card h-100 shadow mycard2 mycard2">
+                    
+                        <div class="card" style="width: 18rem;">
+                          <a href="{% url 'laptop' %}"><img src="../static/images/card/pro1.png"  alt="..."  class="img-fluid img-thumbnail shadow-sm">
+                          </a>
+                          <div>
+                            <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                    
+                            <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt="" style="height: 15px;"> 63990/-</h5>
+                            <small class="card-text d-block"  style="margin: 10px;">OneAssist 1 Year Total Protection Plan for Accidental and Liquid Damage of Laptop Between INR 50001-60000 (E-Mail Delivery Only)
+                                5.0 out of 5 stars 1
+                                ₹1,999 ₹3,998 Save ₹1,999 (50% off)
+                                .</small>
+                              <div class="mt-2">
+                                <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                    
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div> 
+                     </div>
+                     <div class="col-sm-3">
+                        <div class="card h-100 shadow mycard2 mycard2">
+                    
+                        <div class="card" style="width: 18rem;">
+                          <a href="{% url 'laptop' %}"><img src="../static/images/card/charge.png" class="img-fluid img-thumbnail shadow-sm" alt="...">
+                          </a>
+                          <div>
+                            <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                    
+                            <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt="" style="height: 15px;"> 63990/-</h5>
+                            <small class="card-text d-block" style="margin: 10px;">EVM Dual USB Charger with Micro USB Cable Included - 5V 2.4A Fast Charge -Dual Simultaneous Charging - Over Current, Short Circuit, Surge Protection - BIS Certified - 1 Year Warranty (EVM-CH-03)
+                                5.0 out of 5 stars 3
+                                ₹310 ₹499 Save ₹189 (38% off).</small>
+                              <div class="mt-2">
+                                <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                    
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div> 
+                     </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-sm-3">
+                            <div class="card h-100 shadow mycard2 mycard2">
+                        
+                            <div class="card" style="width: 18rem;">
+                              <a href="#"><img src="../static/images/card/charge1.png"  alt="..." class="img-fluid img-thumbnail shadow-sm">
+                              </a>
+                              <div>
+                                <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                        
+                                <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+                                <small class="card-text d-block"  style="margin: 10px;">
+                                    EVM Dual USB Charger with Type C Cable Included - 5V 2.4A Fast Charge - Dual Simultaneous Charging - Over Current, Short Circuit, and Surge Protection - BIS Certified - 1 Year Warranty (EVM-CH-04)
+                                    5.0 out of 5 stars 3
+                                    ₹325 ₹549 Save ₹224 (41% off)
+                                    </small>
+                                  <div class="mt-2">
+                                    <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                    <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                        
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div> 
+                         </div>
+                         <div class="col-sm-3">
+                            <div class="card h-100 shadow mycard2 mycard2">
+                        
+                            <div class="card" style="width: 18rem;">
+                              <a href="#"><img src="../static/images/card/charge2.png"  alt="..." class="img-fluid img-thumbnail shadow-sm">
+                              </a>
+                              <div>
+                                <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                        
+                                <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+                                <small class="card-text d-block"  style="margin: 10px;">boAt WCDV 22.5W Dual Port Charger with 22.5W Power Delivery Support & 18W Quick Charge 3.0, Smart IC Protection, Auto Detection for Samsung, Xiaomi & Android Users with Type A to Type C Cable(White)
+                                    3.8 out of 5 stars 1,233
+                                    1K+ bought in past month
+                                    Great Indian Festival
+                                    ₹499 M.R.P: ₹2,490 (80% off)
+                                    </small>
+                                  <div class="mt-2">
+                                    <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                    <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                        
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div> 
+                         </div>
+                         <div class="col-sm-3">
+                            <div class="card h-100 shadow mycard2 mycard2">
+                        
+                            <div class="card" style="width: 18rem;">
+                              <a href="#"><img src="../static/images/card/glass1.png"  alt="..." class="img-fluid img-thumbnail shadow-sm" style="height: 300px; width: 200px;margin-left: 50PX;">
+                              </a>
+                              <div>
+                                <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                        
+                                <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+                                <small class="card-text d-block"  style="margin: 10px;">MACLEN Original Premium Hd Curved Edges Tempered Glass For Oneplus Nord Ce 3 Lite 5G (2023) With Edge To Edge Coverage And Easy Installation Kit for Smartphone
+                                    4.0 out of 5 stars 223
+                                    ₹189 ₹199 Save ₹10 (Extra 5%)
+                                    .</small>
+                                  <div class="mt-2">
+                                    <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                    <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                        
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div> 
+                         </div>
+                         <div class="col-sm-3">
+                            <div class="card h-100 shadow mycard2 mycard2">
+                        
+                            <div class="card" style="width: 18rem;">
+                              <a href="#"><img src="../static/images/card/glass2.png"  alt="..." class="img-fluid img-thumbnail shadow-sm">
+                              </a>
+                              <div>
+                                <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                        
+                                <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+                                <small class="card-text d-block" style="margin: 10px;">POPIO Tempered Glass Screen Protector Compatible for OnePlus Nord CE 3 Lite (Black) Edge to Edge Coverage with Easy Installation Kit
+                                    4.0 out of 5 stars 22,608
+                                    ₹225 ₹251 Save ₹26 (Extra 10%)
+                                  <div class="mt-2">
+                                    <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                    <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                        
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div> 
+                         </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-3">
+                                <div class="card h-100 shadow mycard2 mycard2">
+                            
+                                <div class="card" style="width: 18remrem;">
+                                  <a href="#"><img src="../static/images/card/cover1.png" alt="..." class="img-fluid img-thumbnail shadow-sm">
+                                  </a>
+                                  <div>
+                                    <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                            
+                                    <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+                                    <small class="card-text d-block"  style="margin: 10px;">CEDO OnePlus Nord CE 3 Lite (5G) Back Cover | Camera Bump Protection & Inner Velvet Fabric Lining | Ultra Slim Matte Soft Rubberised Case Cover (Black)
+                                        4.1 out of 5 stars 463
+                                        ₹144 ₹999 Save ₹855 (86% off)
+                                        </small>
+                                      <div class="mt-2">
+                                        <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                        <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                            
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div> 
+                             </div>
+                             <div class="col-sm-3">
+                                <div class="card h-100 shadow mycard2 mycard2">
+                            
+                                <div class="card" style="width: 18rem;">
+                                  <a href="#"><img src="../static/images/card/cover2.png"  alt="..." class="img-fluid img-thumbnail shadow-sm">
+                                  </a>
+                                  <div>
+                                    <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                            
+                                    <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+                                    <small class="card-text d-block"  style="margin: 10px;">CEDO OnePlus Nord CE 3 Lite (5G) Back Cover | Camera Bump Protection & Inner Velvet Fabric Lining | Ultra Slim Matte Soft Rubberised Case Cover (Green)
+                                        4.1 out of 5 stars 463
+                                        ₹144 ₹999 Save ₹855 (86% off)
+                                        </small>
+                                      <div class="mt-2">
+                                        <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                        <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                            
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div> 
+                             </div>
+                             <div class="col-sm-3">
+                                <div class="card h-100 shadow mycard2 mycard2">
+                            
+                                <div class="card" style="width: 18rem;">
+                                  <a href="#"><img src="../static/images/card/mouse1.png" alt="..." class="img-fluid img-thumbnail shadow-sm">
+                                  </a>
+                                  <div>
+                                    <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                            
+                                    <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+                                    <small class="card-text d-block"  style="margin: 10px;">Logitech B170 Wireless Mouse, 2.4 GHz with USB Nano Receiver, Optical Tracking, 12-Months Battery Life, Ambidextrous, PC/Mac/Laptop - Black
+                                        4.3 out of 5 stars 75,609
+                                        ₹379 ₹499 Save ₹120 (Extra 24%)
+                                        .</small>
+                                      <div class="mt-2">
+                                        <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                        <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                            
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div> 
+                             </div>
+                             <div class="col-sm-3">
+                                <div class="card h-100 shadow mycard2 mycard2">
+                            
+                                <div class="card" style="width: 18rem;">
+                                  <a href="#"><img src="../static/images/card/mouse2.png" alt="..." class="img-fluid img-thumbnail shadow-sm">
+                                  </a>
+                                  <div>
+                                    <a href="#" class="btn btn-warning"style="height: 30px;margin: top 10px; margin-left:10px;">20% off </a><p style="text-align: right;margin-top: -25px;margin-right: 50px;color: rgb(163, 12, 12);">Great indian Festival</p>
+                            
+                                    <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+                                    <small class="card-text d-block" style="margin: 10px;">Logitech M221 Wireless Mouse, Silent Buttons, 2.4 GHz with USB Mini Receiver, 1000 DPI Optical Tracking, 18-Month Battery Life, Ambidextrous PC/Mac/Laptop - Charcoal Grey
+                                        4.3 out of 5 stars 41,217
+                                        ₹521 ₹549 Save ₹28 (Extra 5%).</small>
+                                      <div class="mt-2">
+                                        <a href="#" class="btn btn-success" style="border-radius: 30px;margin-left: 10px;">ADD TO CART</a>
+                                        <!-- <a href="{% url 'sign' %}" class="btn btn-success float-end" style="border-radius: 30px;margin-left: -10;">BUY NOW</a> -->
+                            
+                                    </div>
+                                    
+                                  </div>
+                                </div>
+                              </div> 
+                             </div>
+                            </div>
+    </div>
+</div>
+{% endblock %}

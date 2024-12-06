@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Login Page</title>
+    <link rel="stylesheet" href="../LOGIN/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../LOGIN/images/back.png">
+</head>
+<body>
+    <style>
+        .container{
+            height: 770px;
+            width: 1530px;
+            border: 1px solid;
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+    background: url('../static/images/back5.png') no-repeat center center/cover;
+    
+}
+.form{
+    display: flex;
+    flex-direction:column ;
+    height: 500px;
+    width: 400px;
+    align-items: center;
+    margin:100px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+
+}
+.form h1{
+    color: aliceblue;
+    font-size: 2rem;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+}
+.box{
+    padding: 12px;
+    margin: 20px;
+    width: 65%;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1rem;
+
+
+}
+.submit{
+    padding: 10px 20px;
+    margin-top: 50px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.3);
+    color:white;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+.submit:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: white;
+}
+::placeholder{
+    color: white;
+    opacity: 0.7;
+}
+.a{
+    margin: 0px auto;
+    border-radius:100%;
+    overflow: hidden;
+}
+    </style>
+    <div class="container">
+
+    <form action="" class="form">
+        
+    <h1 class="text-center"><b><img src="../LOGIN/images/Akash.png.png" class="a" alt="" height="35"> Login Page</b></h1>
+<input type="email" name="email" class="box" placeholder="Enter Username">
+<input type="password" name="password" class="box" placeholder="Enter Password">
+<input type="submit" class="submit" value="LOGIN">
+</form>
+    
+</div>
+</body>
+</html>

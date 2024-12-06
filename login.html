@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="row">
+  <div class="col-md-10 mx-auto">
+    <div class="row mt-4" style="background-image:linear-gradient(to right, rgb(224, 210, 107)20%, rgb(201, 103, 127) 80%);">
+      <h1 style="text-align: center;" style="color: rgba(0, 0, 0, 0.1);"> <img src="{% static 'images/card/Ecommerce.png' %}" alt="" style="height: 70px;"> <b><u>Login Page</u></b></h1>
+      <div class="col-md-6 text-light mt-3 " style=" margin-top: -5px; ">
+
+      <div class="card p-0 mt-3" style="background-color: rgba(0, 0, 0, 0.1); margin-top: 1px;color: white;">
+      <!-- <main class="form-signin w-100 m-auto" style="background-image:url(../static/images/card/login2.png);background-repeat: no-repeat;width: 600px;height: 500px;"> -->
+          <h2 class="text-center mt-2" style="color: rgba(0, 0, 0, 0.3);"><img src="{% static 'images/card/login4.png' %}" alt="" height="100px" style="color: rgba(0, 0, 0, 0.5);"><b><u>Login Page</u></b></h2>
+          <form method="post" action="" novalidate class="shadow p-5 mb-2" style="margin-top: -10px;background-color: rgba(0, 0, 0, 0.5); margin-top: 1px;color: rgba(0, 0, 0, 1.2);">
+            {% csrf_token %}
+          {% for fm in form %}
+          <div class="form-group">
+            {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small><br>
+          </div>
+          {% endfor %}
+          <small><a href="{% url 'passwordreset' %}">Forgot Password ?</a></small><br>
+          <input type="submit" class="btn btn-success mt-4 form-control" value="Login" style="border-radius: 50px; background-color: rgba(0, 0, 0, 0.1); color: white;"><br>
+          <div class="text-center fw-bold mt-4"><small>New To My Shopping Websites ? <a href="{% url 'register' %}" class="text-danger">Create an Account</a></small>
+          </div>
+          {% if form.non_field_errors %}
+          {% for errors in form.non_field_errors %}
+          <p>{{errors}}</p>
+          {% endfor %}
+          {% endif %}
+        </form>
+      <!-- </main> -->
+    </div>
+  </div>
+  <div class="col-md-6 mt-3">
+    <img src="{% static 'images/card/login3.png' %}" alt="" style="height: 600px; width: 650px; margin-left: -23px;">
+  </div>
+</div>
+
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,636 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<!-- slider start -->
+<div class="row" style="margin-top: -8px;">
+  <div class="col-sm-12">
+      <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+      <img src="../static/images/card/sd1.png" class="d-block w-100" alt="..." style="height: 655px;">
+      
+    </div>
+    <div class="carousel-item">
+      <img src="../static/images/card/sd2.png" class="d-block w-100" alt="..." style="height: 655px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../static/images/card/sd3.png" class="d-block w-100" alt="..."style="height: 655px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../static/images/card/sd4.png" class="d-block w-100" alt="..."style="height: 655px;">
+    </div>
+    <div class="carousel-item">
+      <img src="../static/images/card/sd5.png" class="d-block w-100" alt="..."style="height: 655px;">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true">{{b.title}}</span>
+    <span class="visually-hidden">Next</span>
+  </button>
+      </div>
+  </div>
+</div> 
+<!-- slide start -->
+ <div class="row"style="background-image: url(../static/images/card/sd4.png);background-attachment: fixed; width: 100%;height: 100%;">
+ <div class="col-sm-10 mx-auto">
+<div class="container">
+  <div class="row text-center p-5 border-bottom shadow" style="background-image:linear-gradient(to right, rgb(30, 78, 13)20%, rgb(82, 29, 205) 80%); color: rgba(231, 232, 224, 0.79);">
+<h1>SALE IS LIVE NOW</h1>
+<marquee behavior="high speed" direction="left-to right"><img src="../static/images/card/new1.gif" alt=""><span>10% Instant Discount on Axis <img src="../static/images/card/new1.gif" alt=""> Bank Credit and Debit Card</span><img src="../static/images/card/new1.gif" alt="">
+</marquee>
+<marquee behavior="" direction="right-to left"><img src="../static/images/card/new1.gif" alt=""><small class="fw-lighter">Term and Condition Applied <img src="../static/images/card/new1.gif" alt=""> (For details visit Bank's official Website)</small><img src="../static/images/card/new1.gif" alt="">
+</marquee>
+</div>
+</div>
+ </div>
+ </div>
+ 
+<!-- slide end-->
+ 
+ <div class="row mx-auto" style="background-image: url(../static/images/card/product2.png);background-attachment: fixed; width: 100%;height: 100%;">
+  <h2 class="text-light">Shoping Deals of the day</h2>
+ 
+<!-- slider end -->
+    <!-- section start1 -->
+<div class="row">
+<div class="col-sm-3 text-center">
+<div class="section shadow-sm w-100">
+  <a href="{% url 'product' %}"><img src="../static/images/card/p1.png" alt="">
+  </a>
+</div>
+<button type="button" class="btn btn-success mt-2">Warning</button>
+
+</div>
+<div class="col-sm-3 text-center">
+<div class="section shadow-sm w-100">
+  <a href="{% url 'product1' %}"><img src="../static/images/card/p2.png" alt="">
+  </a>
+</div>
+<button type="button" class="btn btn-success mt-2">Warning</button>
+
+</div>
+
+<div class="col-sm-3 text-center">
+<div class="section shadow-sm w-100">
+  <a href="{% url 'product3' %}"><img src="../static/images/card/p3.png" alt="">
+  </a>
+</div>
+<button type="button" class="btn btn-success mt-2">Warning</button>
+</div>
+<div class="col-sm-3 text-center">
+<div class="section shadow-sm w-100">
+  <a href="{% url 'product2' %}"><img src="../static/images/card/B12.PNG" alt="">
+  </a>
+</div>
+<button type="button" class="btn btn-success mt-2">Warning</button>
+
+</div>
+</div>
+
+<!-- section end -->
+ 
+   <!-- slider1 start -->
+    <div class="row" style="background-image: url(../static/images/s1.png);background-attachment: fixed; width: 100%;height: 100%;">
+    <div class="col-sm-10 mx-auto">
+      <div class=" mt-4 mb-3">
+    <div class="m-3">
+  <h2 class="text-light">Shoping Mobiles</h2>
+  <div class="owl-carousel" id="slider1">
+    {% for m in mobiles %}
+    <a href="{% url 'product_detail' m.id %}" class="btn" type="submit">
+      <div class="item"><img src="{{m.product_image.url}}" alt="{{ m.title }}"  class="m-image" height="400px"><span class="fw-bold">{{m.title}}</span><br>
+  
+
+  <span class="text-warning">Discount Rs. {{m.discounted_price}}</span>
+  <span class=" text-info m-1" style="border-radius: 10px;">Selling Price Rs. {{m.selling_price}}</span><br>
+  <a href="{% url 'buy_now' m.id %}"><button class="btn btn-primary" type="submit">buy now</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </a>
+<button class="btn btn-success" type="submit">Add Cart</button>
+
+</div> 
+</a>
+
+
+{% endfor %}  
+    </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!-- Slider 1  End -->
+   
+    <!-- slider2 start -->
+    <div class="row">
+      <div class="col-sm-10 mx-auto">
+        <div class=" mt-4 mb-3">
+ <div class="mx-3">
+  <h2 class="text-light">Trending Shoping Deals</h2>
+  <div class="owl-carousel" id="slider4">
+    {% for l in laptops %}
+    <a href="{% url 'product_detail' l.id %}" class="btn" type="submit">
+      <div class="item"><img src="{{l.product_image.url}}" alt="{{ product.title }}" height="200px"><span class="fw-bold w-100">{{l.title}}</span>
+  <br><span class="text-info"> Discount Price Rs. {{l.discounted_price}}</span>
+  <span class=" text-success m-1" style="border-radius: 10px;">Selling Price Rs. {{l.selling_price}}</span><br>
+  <a href="{% url 'buy_now' l.id %}"><button class="btn btn-primary" type="submit">buy now</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-secondary" type="submit">Add Cart</button>
+  
+</div></a>
+  {% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+   <!-- slider2   end -->
+     
+  <!-- slider3 start -->
+  <div class="row mx-auto">
+    <div class="col-sm-10 mx-auto">
+      <div class=" mt-4 mb-3">
+<div class="mx-3">
+  <h2 class="text-light">Trending Shoping Deals</h2>
+  <div class="owl-carousel" id="slider3">
+    {% for tp in topwears %}
+    <a href="{% url 'product_detail' tp.id %}" class="btn" type="submit">
+      <div class="item w-100"><img src="{{tp.product_image.url}}" alt="{{ product.title }}" height="200px"><span class="fw-bold">{{tp.title}}</span>
+  <br><span class="text-info"> Discount Price Rs. {{tp.discounted_price}}</span>
+  <span class=" text-success m-1" style="border-radius: 10px;">Selling Price Rs. {{tp.selling_price}}</span><br>
+  <a href="{% url 'buy_now' tp.id %}"><button class="btn btn-primary" type="submit">buy now</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-secondary" type="submit">Add Cart</button>
+  
+</div></a>
+  {% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+   <!-- slider3   end -->
+
+
+
+
+    <!-- slider4 start -->
+    <div class="row w-100%">
+      <div class="col-sm-10 mx-auto">
+        <div class=" mt-4 mb-3 w-100%">
+ <div class="mx-3">
+  <h2 class="text-light">Trending Deals</h2>
+  <div class="owl-carousel" id="slider4">
+    {% for b in bottomwears %}
+    <a href="{% url 'product_detail' b.id %}" class="btn" type="submit">
+      <div class="item w-100"><img src="{{b.product_image.url}}" alt="{{ product.title }}" height="200px"><span class="fw-bold">{{b.title}}</span>
+  <br><span class="text-info"> Discount Price Rs. {{b.discounted_price}}</span>
+  <span class=" text-success m-1" style="border-radius: 10px;">Selling Price Rs. {{b.selling_price}}</span><br>
+  <a href="{% url 'buy_now' b.id %}"><button class="btn btn-primary" type="submit">buy now</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="btn btn-secondary" type="submit">Add Cart</button>
+  
+</div></a>
+  {% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+   <!-- slider4  end -->
+ 
+ <!-- product 1 start -->
+<div class="row">
+<div class="col-sm-10 mx-auto">
+<div class="row mt-5" id="a1">
+  <div class="col-sm-3" style="border-radius: 50px;">
+           <div class="card h-100 w-100 shadow mycard2 mycard2">
+
+    <div class="card h-100 w-100">
+      <a href="{% url 'mobile' %}"><img src="../static/images/card/system1.png" class="card-img-top w-100" alt="..."  style="padding: 5%;">
+      </a>
+      <div>
+        <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+        <h5 class="card-title">Rs.27000 <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> {{b.discounted_price}}</h5>
+        <small class="card-text d-block" style="text-align: justify;padding: 5%;">Oneplus Nord CE4 (Dark Chrome, 8GB RAM, 256GB Storage)  The Qualcomm Snapdragon 7 Gen 3 chipset not only gives your Nord CE4 silly levels of OnePlus Fast and Smooth performance, but it also guards your battery life and maximizes power efficiency.</small>
+        <div class="p-1">
+          <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+          <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+        </div>
+      </div>
+      </div>
+   
+  </div> 
+ </div>
+ 
+   <div class="col-sm-3">
+    <div class="card h-100 w-100 shadow mycard2 mycard2">
+
+    <div class="card h-100 w-100">
+      <a href="{% url 'laptop' %}"><img src="../static/images/card/system2.png" class="card-img-top w-100" alt="..."  style="padding: 5%;">
+      </a>
+      <div>
+        <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+        <small class="card-text d-block" style="text-align: justify;padding: 5%;">ASUS TUF Gaming A15, Ryzen 7 7435HS, 15.6-inch (39.62 cm) FHD 144Hz, Gaming Laptop (16GB RAM/512GB SSD/NVIDIA GeForce RTX 3050/Windows 11/48WHr/Graphite Black/2.3 Kg), FA506NCR-HN054W Processor : AMD Ryzen 7  .</small>
+        <div class="p-1">
+          <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+          <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+        </div>
+        
+      </div>
+    </div>
+  </div> 
+ </div>
+    <div class="col-sm-3">
+      <div class="card h-100 w-100 shadow mycard2 mycard2">
+      <div class="card h-100 w-100">
+        <a href="{% url 'laptop1' %}"><img src="../static/images/card/system3.png" class="card-img-top w-100" alt="..."  style="padding: 5%;">
+          <iframe frameborder="0" tabindex="-1" src="javascript:void(false)" style="display:none;position:absolute;z-index:0;filter:Alpha(Opacity='0');opacity:0;"></iframe>
+        </a>
+        <div>
+          <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+          <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 59990/-</h5>
+          <small class="card-text d-block" style="text-align: justify;padding: 5%;">Lenovo [Smartchoice LOQ 12th Gen Intel Core i5-12450HX /39.6cm/ 144Hz 300Nits FHD Gaming Laptop (16GB/512GB SSD/Win 11/ RTX 3050 6GB Graphics/100% sRGB/MSO 21/3 Mon Game Pass/Grey/2.4Kg), 83GS003UIN sRGB/MSO.</small>
+          <div class="p-1">
+            <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+            <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+          </div>
+        </div>
+        </div>
+     
+    </div> 
+   </div>
+  <div class="col-sm-3">
+    <div class="card h-100 w-100 shadow mycard2 mycard2">
+
+    <div class="card h-100 w-100">
+      <a href="{% url 'laptop2' %}"><img src="../static/images/card/system4.png" class="card-img-top w-100" alt="..."  style="padding: 5%;">
+      </a>
+      <div>
+        <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 50990/-</h5>
+        <small class="card-text d-block" style="text-align: justify;padding: 5%;">HP Victus Gaming Laptop,Windows 11 Home,AMD Ryzen 5 5600H,4Gb RTX 3050 Gpu,15.6-Inch (39.6 Cm),Fhd,IPS,144Hz,16Gb Ddr4,512Gb Ssd,Backlit Kb,B&O,9Ms Response Time,Dual Speakers (Blue,2.37 Kg),Fb0106Ax.</small>
+        <div class="p-1">
+          <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+          <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+        </div>
+      </div>
+      </div>
+   
+  </div> 
+ </div>
+</div>
+</div>
+</div>
+<!-- Product1 End -->
+<div class="row mt-5" id="a2">
+  <div class="col-sm-3">
+    <div class="card h-100 shadow zoom-in">
+
+    <div class="card h-100 w-100">
+      <img src="../static/images/card/system5.png" class="card-img-top w-100" alt="..."  style="padding: 5%;">
+      <div>
+        <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 25999/-</h5>
+        <small class="card-text d-block" style="text-align: justify;padding: 5%;">Oneplus Nord CE4 (Dark Chrome, 8GB RAM, 256GB Storage)  The Qualcomm Snapdragon 7 Gen 3 chipset not only gives your Nord CE4 silly levels of OnePlus Fast and Smooth performance, but it also guards your battery life .</small>
+        <div class="p-1">
+          <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+          <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+        </div>
+        </div>
+        
+      </div>
+   
+  </div> 
+ </div>
+ 
+   <div class="col-sm-3">
+    <div class="card h-100 shadow zoom-in">
+    <div class="card w-100 h-100">
+      <img src="../static/images/card/system6.png" class="card-img-top w-100" alt="..."  style="padding: 5%;">
+      <div>
+        <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 63990/-</h5>
+
+        <small class="card-text d-block" style="text-align: justify;padding: 5%;">ASUS TUF Gaming A15, Ryzen 7 7435HS, 15.6-inch (39.62 cm) FHD 144Hz, Gaming Laptop (16GB RAM/512GB SSD/NVIDIA GeForce RTX 3050/Windows 11/48WHr/Graphite Black/2.3 Kg), FA506NCR-HN054W Processor .</small>
+        <div class="p-1">
+          <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+          <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+        </div>
+      </div>
+      </div>
+   
+  </div> 
+ </div>
+    <div class="col-sm-3">
+      <div class="card h-100 w-100 zoom-in">
+      <div class="card w-100 h-100">
+        <img src="../static/images/card/system7.png" class="card-img-top w-100" alt="..."  style="padding: 5%;">
+        <div>
+          <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+          <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 59990/-</h5>
+          <small class="card-text d-block" style="text-align: justify;padding: 5%;">Lenovo [Smartchoice LOQ 12th Gen Intel Core i5-12450HX /39.6cm/ 144Hz 300Nits FHD Gaming Laptop (16GB/512GB SSD/Win 11/ RTX 3050 6GB Graphics/100% sRGB/MSO 21/3 Mon Game Pass/Grey/2.4Kg), 83GS003UIN.</small>
+          <div class="p-1">
+            <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+            <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+          </div>
+        </div>
+        </div>
+     
+    </div> 
+   </div>
+  <div class="col-sm-3">
+    <div class="card h-100 w-100 shadow zoom-in">
+    <div class="card h-100 w-100">
+      <img src="../static/images/card/system8.png" class="card-img-top w-100" alt="..."  style="padding: 5%;">
+      <div>
+        <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 50990/-</h5>
+        <small class="card-text d-block" style="text-align: justify;padding: 5%;">HP Victus Gaming Laptop,Windows 11 Home,AMD Ryzen 5 5600H,4Gb RTX 3050 Gpu,15.6-Inch (39.6 Cm),Fhd,IPS,144Hz,16Gb Ddr4,512Gb Ssd,Backlit Kb,B&O,9Ms Response Time,Dual Speakers (Blue,2.37 Kg),Fb0106Ax.</small>
+        <div class="p-1">
+          <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+          <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+        </div>
+      </div>
+      </div>
+   
+  </div> 
+ </div>
+</div>
+<!-- Product 1 End-->
+
+<div class="row mt-5" id="a3">
+  <div class="col-sm-3">
+    <div class="card h-100 w-100 zoom-in">
+    <div class="card w-100 h-100">
+      <img src="../static/images/card/system9.png" class="card-img-top" alt="..." style="padding: 5%;">
+      <div>
+        <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 29999/-</h5>
+        <small class="card-text d-block" style="text-align: justify;padding: 5%;">Oneplus Nord CE4 (Dark Chrome, 8GB RAM, 256GB Storage)  The Qualcomm Snapdragon 7 Gen 3 chipset not only gives your Nord CE4 silly levels of OnePlus Fast and Smooth performance, but it also guards your battery  .</small>
+        <div class="p-1">
+          <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+          <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+        </div>
+      </div> 
+      </div>
+   
+  </div> 
+ </div>
+ <!-- Product 2 Start -->
+   <div class="col-sm-3">
+    <div class="card h-100 w-100 shadow zoom-in">
+    <div class="card w-100 h-100">
+      <img src="../static/images/card/system2.png" class="card-img-top" alt="..." style="padding: 5%;">
+      <div>
+        <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 67990/-</h5>
+
+        <small class="card-text d-block" style="text-align: justify; padding: 5%;">ASUS TUF Gaming A15, Ryzen 7 7435HS, 15.6-inch (39.62 cm) FHD 144Hz, Gaming Laptop (16GB RAM/512GB SSD/NVIDIA GeForce RTX 3050/Windows 11/48WHr/Graphite Black/2.3 Kg), FA506NCR-HN054W Processor : .</small>
+        <div class="p-1">
+          <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+          <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+        </div>
+      </div>
+      </div>
+   
+  </div> 
+ </div>
+    <div class="col-sm-3">
+      <div class="card h-100 w-100 shadow zoom-in">
+      <div class="card w-100 h-100">
+        <img src="../static/images/card/system3.png" class="card-img-top" alt="..." style="padding: 5%;">
+        <div>
+          <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+
+          <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 61990/-</h5>
+          <small class="card-text d-block" style="text-align: justify;padding: 5%;">Lenovo [Smartchoice LOQ 12th Gen Intel Core i5-12450HX /39.6cm/ 144Hz 300Nits FHD Gaming Laptop (16GB/512GB SSD/Win 11/ RTX 3050 6GB Graphics/100% sRGB/MSO 21/3 Mon Game Pass/Grey/2.4Kg), 83GS003UIN.</small>
+          <div class="p-1">
+            <a href="{% url 'addcart' %}" class="btn btn-success w-100% float-start" style="border-radius: 30px; padding: 3%;">ADD TO CART</a>
+            <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+          </div>
+        </div>
+        </div>
+     
+    </div> 
+   </div>
+  <div class="col-sm-3">
+    <div class="card h-100 w-100 zoom-in">
+    <div class="card w-100 h-100">
+      <img src="../static/images/card/system4.png" class="card-img-top" alt="..." style="padding: 5%;">
+      <div>
+        <a href="#" class="btn btn-warning"style="height: 30px;">20% off </a><p style="text-align: right;color: rgb(163, 12, 12);">Great indian Festival</p>
+        <h5 class="card-title">Rs. <img src="../static/images/card/rup.png" alt=""style="height: 15px;"> 65990/-</h5>
+
+        <small class="card-text d-block" style="text-align: justify;padding: 5%;">HP Victus Gaming Laptop,Windows 11 Home,AMD Ryzen 5 5600H,4Gb RTX 3050 Gpu,15.6-Inch (39.6 Cm),Fhd,IPS,144Hz,16Gb Ddr4,512Gb Ssd,Backlit Kb,B&O,9Ms Response Time,Dual Speakers (Blue,2.37 Kg),Fb0106Ax.</small>
+          <div class="p-1">
+            <a href="{% url 'addcart' %}" class="btn btn-success w-100% p-2 float-start" style="border-radius: 30px;">ADD TO CART</a>
+            <a href="{% url 'sign' %}" class="btn btn-success  w-100% p-2 float-end" style="border-radius: 30px; padding: 50px;">BUY NOW</a>
+          </div>
+        </div>
+        
+      </div>
+   
+  </div> 
+ </div>
+</div>
+ <!-- Product 2 End -->
+ <!-- Product 3 start -->
+<div class="row mt-5 text-center" id="a4">
+  <div class="col-sm-3">
+      <div class="mycard w-100">
+          <div class="pt-3 ps-3">
+              <button class="btn border border rounded-pill-3 bg-success">new</button>
+          </div>
+          
+             <div><img src="../static/images/card/ice1.png" alt=""class="img-fluid "></div>
+             <div>
+                  
+                      
+             </div>
+             <div class="position-absolute bottom-0 ps-3 pb-4">
+              
+             </div>
+             <h4>Choko Fudge</h4>
+             <h5>Badabit Ice Cream Candy</h5>
+             </div>
+              
+             
+      </div>
+  
+  <div class="col-sm-3">
+      <div class="mycard bg-primary w-100">
+          <div class="pt-3 ps-3">
+              <button class="btn border border rounded-pill-3 bg-success">new</button>
+          </div>
+          
+             <div><img src="../static/images/card/ice2.png" alt=""class="img-fluid"></div>
+             <div>                  
+                      
+             </div>
+             <div class="position-absolute bottom-0 ps-3 pb-4">
+              
+             </div>
+              <h4>American Nuts</h4>
+              <h5>Flingo ice Cream Cone</h5>
+             </div>
+  </div>
+  <div class="col-sm-3">
+      <div class="mycard bg-danger w-100">
+          <div class="pt-3 ps-3 text-center">
+              <button class="btn border border rounded-pill-3 bg-success">new</button>
+          </div>
+          
+             <div><img src="../static/images/card/ice3.png" alt=""class="img-fluid"></div>
+             <div>
+                  
+                      
+             </div>
+             <div class="position-absolute bottom-0 ps-3 pb-4">
+              
+             </div>
+              <h4>Rajwadi</h4>
+              <h5>Current Natural kulfi</h5>
+             </div>
+  </div>
+  <div class="col-sm-3">
+      <div class="mycard bg-info w-100">
+          <div class="pt-3 ps-3">
+              <button class="btn border border rounded-pill-3 bg-success">new</button>
+          </div>
+          
+             <div><img src="../static/images/card/ice4.png" alt=""class="img-fluid"></div>
+             <div>
+                  
+                      
+             </div>
+             <div class="position-absolute bottom-0 ps-3 pb-4">
+              
+             </div>
+              <h4>Choko Crackle Flingo</h4>
+              <h5>Flingo Ice Cream Cone</h5>
+             </div>
+  </div>
+</div>
+<!--  Product 3 end -->
+<!--  Product 4 start -->
+<div class="row mt-5 text-center mb-5" id="a5" >
+<div class="col-sm-3">
+    <div class="mycard1 w-100" style="height: 525px; width: 300px;">
+        <div class="pt-3 ps-3">
+            <button class="btn border border rounded-pill-3 bg-success p-2 m-0">new</button>
+        </div>
+        
+           <div><img src="../static/images/card/book1.png" alt=""class="img-fluid "></div>
+           <div>
+                
+                    
+           </div>
+           <div class="position-absolute bottom-0 ps-3 pb-4">
+            
+           </div>
+            <h4>Science</h4>
+              <h5>World’s Greatest Books For Personal Growth & Wealth (Set of  Books) :</h5>
+           </div>
+            
+           
+    </div>
+
+<div class="col-sm-3">
+    <div class="mycard1 w-100" style="height: 525px; width: 300px;">
+        <div class="pt-3 ps-3">
+            <button class="btn border border rounded-pill-3 bg-success">new</button>
+        </div>
+        
+           <div><img src="../static/images/card/book2.png" alt=""class="img-fluid"></div>
+           <div>
+            <!-- <img src="IMAGES/Cream.png" alt="" class="img-fluid"></img> -->
+                
+                    
+           </div>
+           <div class="position-absolute bottom-0 ps-3 pb-4">
+            
+           </div>
+            <h4>American Nuts</h4>
+            <h5>Flingo ice Cream Cone</h5>
+           </div>
+</div>
+<div class="col-sm-3">
+    <div class="mycard1 w-100" style="height: 525px; width: 300px;">
+        <div class="pt-3 ps-3">
+            <button class="btn border border rounded-pill-3 bg-success">new</button>
+        </div>
+        
+           <div><img src="../static/images/card/book3.png" alt=""class="img-fluid"></div>
+           <div>
+                
+                    
+           </div>
+           <div class="position-absolute bottom-0 ps-3 pb-4">
+            
+           </div>
+            <h4>Rajwadi</h4>
+            <h5>Current Natural kulfi</h5>
+           </div>
+</div>
+<div class="col-sm-3">
+    <div class="mycard1 w-100" style="height: 525px; width: 300px;">
+        <div class="pt-3 ps-3">
+            <button class="btn border border rounded-pill-3 bg-success">new</button>
+        </div>
+        
+           <div><img src="../static/images/card/book4.png" alt=""class="img-fluid"></div>
+           <div>
+                
+                    
+           </div>
+           <div class="position-absolute bottom-0 ps-3 pb-4">
+            
+           </div>
+            <h4>Choko Crackle Flingo</h4>
+            <h5>Flingo Ice Cream Cone</h5>
+           </div>
+</div>
+</div>
+
+
+</div>
+</div>
+<!-- Product 4 End -->
+<!-- Product 5 Start -->
+<div class="row" id="a6">
+  <div class="col-md-10 mx-auto">
+    <div class="row mt-4 mb-3">
+      <div class="owl-carousel" id="slider1">
+        <a href="#" class="btn"><div class="item w-100"><img src="{% static 'images/card/system9.png' %}" alt="" height="200px"><span class="fw-bold">Product 1</span><br>
+          <span class="fs-5">Rs. 25000</span></div></a>
+          
+          <a href="#" class="btn"><div class="item w-100"><img src="{% static 'images/card/system8.png' %}" alt="" height="200px"><span class="fw-bold">Product 1</span><br>
+            <span class="fs-5">Rs. 60000</span></div></a>
+            
+            <a href="#" class="btn"><div class="item w-100"><img src="{% static 'images/card/system6.png' %}" alt="" height="200px"><span class="fw-bold">Product 1</span><br>
+              <span class="fs-5">Rs. 65000</span></div></a>
+              
+              <a href="#" class="btn"><div class="item w-100"><img src="{% static 'images/card/system5.png' %}" alt="" height="200px"><span class="fw-bold">Product 1</span><br>
+                <span class="fs-5">Rs. 55000</span></div></a>
+                         
+    </div>
+    </div>
+  </div>
+</div>
+<!-- Product 5 End -->
+
+
+
+
+{% endblock %}

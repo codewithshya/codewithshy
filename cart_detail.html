@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My Profile {% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Your Cart</h1>
+        {% if cart and cart.items.all %}
+        <div class="row w-100%" style="width: 1500px;">
+            <table class="table mt-4">
+                <thead>
+                    <tr>
+                        <th style="background-color: aqua;">Product_image</th>
+                        <th style="background-color: aqua;">Product Name</th>
+                        <th style="background-color: aqua;">Quantity</th>
+                        <th style="background-color: aqua;">Price</th>
+                        <th style="background-color: aqua;">Total</th>
+                        <th style="background-color: aqua;">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+        </div>
+                {% for item in cart.items.all %}
+                <tr>
+                    <td>{{ item.product.product_image.url }}</td>
+                    <td>{{ item.product.title }}</td>
+                    <td>Rs. {{ item.product.selling_price }}</td>
+                    <td>Rs. {{ item.product.discounted_price }}</td>
+                    <td>{{ item.product.brand }}</td>
+                    <td>{{ item.total_category }}</td>
+                    <td>
+                        <a href="{% url 'remove_from_cart' item.id %}" class="" style="margin-right: 10px; text-decoration: none;">Remove <i class="fa-solid fa-trash text-danger"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-end">
+            <a href="{% url 'checkout' %}" class="btn btn-success mb-4 mt-4 px-5" style="margin-left: -10px;">Proceed to Checkout</a>
+        </div>
+        {% else %}
+        <p class="text-center">Your cart is empty. <a href="{% url 'product_list' %}">Continue Shopping</a></p>
+        {% endif %}
+    </div>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<div class="container">
+    <br>
+    <div class="card mb-3">
+<div class="row g-0">
+    <div class="col-md-4">
+
+
+
+     <!-- Product Image -->
+                  <img class="card-img-top" src="{{ product.product_image.url }}" alt="..."/>
+                  <!-- Product Details -->
+                   <div class="card-body p-4">
+                    <div class="text-center">
+                      <!-- Product Name -->
+                       <h5 class="fw-bolder">{{ product.title }}</h5>
+                       <h5 class="fw-bolder">{{ product.brand }}</h5>
+                       <h5 class="fw-bolder">{{ product.description }}</h5>
+                       <h5 class="fw-bolder">{{ product.category }}</h5>
+
+
+
+        <div class="col-md-8">
+    <div class="card-body">
+<center>
+    <h5 class="card-title">{{ product.title }}</h5>
+    <br>
+    <p class="card-text justified">{{ product.description }}</p>
+    {% if product.category %}
+    <div class="d-flex justify-content-center small text-warning mb-2">
+        <div class="bi-star-fill">
+            &nbsp;&nbsp;Sale&nbsp;&nbsp;
+            <div class="bi-star-fill">
+
+            </div>
+            <!-- Product price -->
+             <strike>
+                RS.{{ product.selling_price }}
+                RS.{{ product.costing_price }}
+
+             </strike>
+             &nbsp;
+             RS.{{ product.selling_price }}
+             {% else %}
+             RS.{{ product.selling_price }}
+             <br>BRAND: {{ product.brand }}
+             {% endif %}
+             <br><br>
+             <a href="{% url 'index' %}" class="btn btn-secondary">Home</a>
+             <button type="button" value="{{ product.brand }}" class="btn btn-secondary" id="add-cart">Add To Cart</button>
+
+</center>
+    </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script>
+    //  check if button pressed
+    $(document).on('click', '#add-cart', function(e){
+       e.preventDefault();
+       $.ajax({
+        type: 'POST',
+        url: '{% url 'cart_add' %}',
+        data: {
+            product_brand: $('#add-cart').val(),
+            csrfmiddlewaretoken: '{{ csrf_token }}',
+            action: 'post'
+        },
+
+        success: function(json){
+            console.log(json)
+
+        },
+        error: function(xhr, errmsg, err){
+
+        }
+       });
+    })
+</script>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Address {% endblock title %}
+{% block body %}
+<div class="container mt-4" style="background: url(../static/images/back1.png); background-size: cover; background-repeat: no-repeat;">
+<div class="row">
+    <h3 class="text-success"> <img src="{% static 'images/card/wel.jpg' %}" alt="" height="60"><b><u> Welcome <span class="text-capitalize">{{req.user}}</span></u></b></h3>
+    <div class="col-sm-2 border-start">
+<ul class="list-unstyled">
+    <li class="d-grid"><a href="{% url 'profile' %}" class="btn {{active}}"><img src="../static/images/ak.png" alt="" height="30px" style="border-radius: 30px;"> Profile</a></li>
+    <li class="d-grid"><a href="{% url 'address' %}" class="btn {{active}} mt-2">Address</a></li>
+    <li class="d-grid"><a href="{% url 'passwordchange' %}" class="btn {{active}} mt-2"><img src="../static/images/card/pass.jpg" alt="" height="30px" style="margin-right: 100px;">ChangePassword</a></li>
+
+</ul>
+</div>
+<div class="col-sm-9 offset-sm-1">
+    <h2 class="text-center text-danger"><b><u>Address</u></b></h2>
+<div class="row mt-2">
+    {% for ad in add  %}
+    <div class="col-sm-6">
+        <div class="card m-4">
+            <div class="card-body bg-secondary text-light" >
+                <h3>Address {{forloop.counter}}</h3>
+                <p>Name: {{ad.name}}</p>
+                <p>Locality: {{ad.locality}}</p>
+                <p>City: {{ad.city}}</p>
+                <p>State: {{ad.state}}</p>
+                <p>Pin Code: {{ad.zipcode}}</p>
+            </div>
+        </div>
+    </div>
+   {% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endblock %}

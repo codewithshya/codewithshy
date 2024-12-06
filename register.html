@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Cart {% endblock title %}
+{% block body %}
+<div class="row text-dark">
+    <div class="col-md-12 mx-auto" style="background-image:linear-gradient(to right, rgb(224, 210, 107)20%, rgb(201, 103, 127) 80%);">
+        <div class="row text-info p-0">
+          <div class="col-md-6">
+            <img src="../static/images/library/Register.png" alt="" class="mt-3" height="601px" style="margin-left: -13px;">
+          </div>
+            <div class="col-md-6 bg-light mt-3 " style="margin-left: -15px; background-image:linear-gradient(to right, rgb(224, 210, 107)20%, rgb(201, 103, 127) 80%);">
+              <hr>  
+              <h1 class="text-center" style="margin-bottom: 50px; color: rgba(0, 0, 0, 0.3);"><b><u>Registration page</u></b></h1>
+
+                <form method="post" action="" novalidate class="shadow p-5 mb-2" style="margin-top: -100px; border-radius: 50px;background-image:linear-gradient(to right, rgb(101, 92, 20)20%, rgb(95, 229, 104) 80%);">
+                 {% if messages %}
+                 {% for message in messages %}
+                 <p {% if message.tags %} class="alert alert-{{message.tags}} mb-4" {% endif %}>{{message}}</p>
+                 {% endfor %} 
+                 {% endif %}
+                 {% csrf_token %}
+                  {% for fm in form %}
+                  <div class="form-group" style="border-radius: 50px;">
+                    {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small>
+                  </div>
+                  {% endfor %}
+                  <input type="submit" value="submit" class="btn btn-success form-control" style="border-radius: 20px; background-color: rgba(0, 0, 0, 0.1); outline-color:rgb(201, 170, 170);"><br>
+                  <div class="text-center text-danger fw-bold"><small>Existing User ? <a href="{% url 'login' %}" class="text-danger">login Now</a></small>
+                  </div>
+                  {% if form.non_field_errors %}
+                  {% for error in form.non_field_errors %}
+                  <p class="alert alert-danger my-3">{{errors}}</p>
+                  {% endfor %}
+                  {% endif %}
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

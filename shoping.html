@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="row text-dark">
+    <div class="col-md-4 mx-auto">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="container bg-light mt-3" style="border-radius: 50px;">
+                    <h2 class="text-center" style="margin-top: 10px;"><img src="../static/images/card/Account.png" alt=""> Create Account</h2>
+                    <div class="form-floating mt-2">Name
+                        <input type="name" class="form-control" id="floatingInput" placeholder="" name="name" style="border-radius:50px; background-image:linear-gradient(to right, rgb(141, 179, 169)20%, rgb(124, 130, 45) 80%);">Emailaddress
+                        <label for="floatingInput"><i class="fa-solid fa-user mt-4"></i> Name</label>
+                      </div>
+                    <div class="form-floating mt-2">
+                        <input type="username" class="form-control" id="floatingInput" placeholder="name@example.com" name="email" style="border-radius:50px; background-image:linear-gradient(to right, rgb(141, 179, 169)20%, rgb(124, 130, 45) 80%);">Password
+                        <label for="floatingInput"><i class="fa-solid fa-envelope"></i> Emailaddress</label>
+                      </div>
+                      <div class="form-floating mt-2">
+                        <input type="password" class="form-control text-light" id="Password" placeholder="At list five character" name="password" style="border-radius:50px;background-image:linear-gradient(to right, rgb(141, 179, 169)20%, rgb(124, 130, 45) 80%);">Again Password
+                        <label for="floatingPassword"><i class="fa-sharp fa-solid fa-key"></i> At list five character</label>
+                        <div class="form-floating mt-2">
+                            <input type="password" class="form-control text-light" id="Password" placeholder="At list five character" name="password" style="border-radius:50px;background-image:linear-gradient(to right, rgb(141, 179, 169)20%, rgb(124, 130, 45) 80%);">
+                            <label for="floatingPassword"><i class="fa-sharp fa-solid fa-key"></i> Again Password</label>
+                      </div>
+                      <button class="btn btn-warning w-100 py-2 mt-4 mb-3" type="submit" style="border-radius: 50px;">Create your Shoping Account</button>
+                    </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

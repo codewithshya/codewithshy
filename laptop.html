@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body  %}
+<div class="row zoom-in" style="background-color: aliceblue;">
+    <div class="col-md-10 mx-auto">
+        <div class="row">
+            <div class="col-md-6"><img src="../static/images/card/laptop1.png" alt="" class="img-fluid img-thumbnail" style="height: 400px;"></div>
+            <div class="col-md-4">
+                <h3>ASUS TUF Gaming A15, Ryzen 7 7435HS, 15.6-inch (39.62 cm) FHD 144Hz, Gaming Laptop (16GB RAM/512GB SSD/NVIDIA GeForce RTX 3050/Windows 11/48WHr/Graphite Black/2.3 Kg), FA506NCR-HN054W</h3>
+                    <h6>Visit the ASUS Store<br>
+                    4.1 4.1 out of 5 stars    266 ratings | Search this page<br>
+                    Amazon's<br>
+                    Choice<br>
+                    1K+ bought in past month<br>
+                    Great Indian Festival<br>
+                    ₹60,990.00 with 27 percent savings-27% ₹60,990<br>
+                    M.R.P.: ₹83,990.00M.R.P.: ₹83,990<br>
+                    Inclusive of all taxes<br>
+                    EMI starts at ₹2,957. No Cost EMI available EMI options<br>
+                    </h6>
+            </div>
+            <div class="col-md-2">
+                <a href="{% url 'addcart' %}" class="btn btn-warning text-light" style="border-radius: 30px;margin-left: -10px;margin-right: 1px;width: 200px;">ADD TO CART</a>
+                <a href="{% url 'sign' %}" class="btn btn-warning float-end text-light" style="border-radius: 30px;margin-left: 100px; margin-top: 10px;margin-right: 1px; width: 200px;">BUY NOW</a>
+
+               </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="row zoom-in bg-light">
+    <div class="col-md-10 mx-auto">
+        <div class="row">
+            <div class="col-md-6"><img src="../static/images/card/lenvo.png" alt="" class="img-fluid img-thumbnail"></div>
+            <div class="col-md-6 mt-4">
+<h4>Lenovo [Smart Choice Ideapad Gaming 3 Laptop<br>
+    AMD Ryzen 5 5500H 15.6" (39.62Cm) Fhd IPS<br>
+     300Nits 144Hz (8Gb/512Gb Ssd/Win11/Nvidia RTX<br> 
+     2050 4Gb/Alexa/3 Month Game Pass/Shadow<br>
+     Black/2.32Kg),82K20289In<br></h4>
+Visit the Lenovo Store<br>
+4.1 4.1 out of 5 stars    639 ratings | Search this page<br>
+Amazon's<br>
+Choice<br>
+1K+ bought in past month<br>
+Great Indian Festival
+₹45,990.00 with 41 percent savings-41% ₹45,990<br>
+M.R.P.: ₹77,990.00M.R.P.: ₹77,990<br>
+Inclusive of all taxes<br>
+EMI starts at ₹2,230. No Cost EMI available EMI options<br>
+
+            </div>
+            <div class="col-md-2">
+                <a href="{% url 'addcart' %}" class="btn btn-warning text-light" style="border-radius: 30px;margin-left: -10px;margin-right: 1px;width: 200px;">ADD TO CART</a>
+                <a href="{% url 'sign' %}" class="btn btn-warning float-end text-light" style="border-radius: 30px;margin-left: 100px; margin-top: 10px;margin-right: 1px; width: 200px;">BUY NOW</a>
+
+               </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
